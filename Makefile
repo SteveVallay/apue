@@ -1,6 +1,6 @@
 include Make.defines.linux
 
-PROGS = myls read-write
+PROGS = myls read-write get-put
 
 all: $(PROGS)
 
