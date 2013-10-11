@@ -4,23 +4,24 @@
 #define BUF_SIZE 1024 
 int main(void)
 {
-   int size = 100;
-
-   char buf[BUF_SIZE];
+   char buf[MAXLINE];
+   pid_t pid;
    int status = 0;
 
-   while(fgets(buf, size, stdin) != 0)
+   printf("%% ");
+   while (fgets(buf, MAXLINE, stdin) != NULL)
    {
        /*replace last character to \0 */
        int n = strlen(buf);
-       printf("str is %s, len is %d",buf,n);
-       buf[n-1] = 0;
+       if (buf[n-1] == '\n')
+           buf[n-1] = 0;
 
        /*call the command:*/
-       pid_t pid = fork();
+       pid = fork();
        if (0 == pid){
            printf("returned in child process pid is %d \n",pid);
            execlp(buf,buf,(char*)0);
+           err_ret("couldn't execute %s",buf);
            exit(127);
 
        } else if ( pid > 0 ) {
@@ -30,6 +31,7 @@ int main(void)
        } else {
            err_sys("fork error\n");
        }
+       printf("%% ");
    }
 
    exit(0);
