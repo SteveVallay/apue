@@ -13,8 +13,11 @@ int main(void)
    {
        /*replace last character to \0 */
        int n = strlen(buf);
-       if (buf[n-1] == '\n')
+       if (buf[n-1] == '\n'){
            buf[n-1] = 0;
+       }else{
+           printf("last char is %d",buf[n-1]);
+       }
 
        /*call the command:*/
        pid = fork();
