@@ -14,5 +14,9 @@ WKDIR=/home/goodluck/github/apue
 to your own direcory, then:
 
 ```bash
+cd lib
+make
+
+cd ..
 make
 ```
