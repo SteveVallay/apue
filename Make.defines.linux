@@ -12,7 +12,7 @@ LDLIBS=$(WKDIR)/lib/libapue.a $(EXTRALIBS)
 CFLAGS=-DLINUX -ansi -I$(WKDIR)/include -Wall -D_GNU_SOURCE $(EXTRA)
 
 # Our library that almost every program needs.
-LIB=../libapue.a
+LIB=$(WKDIR)/lib/libapue.a
 
 # Common temp files to delete from each directory.
 TEMPFILES=core core.* *.o temp.* *.out typescript*
