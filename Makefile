@@ -1,6 +1,7 @@
 include Make.defines.linux
 
-PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal
+PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
+		lseek
 
 all: $(PROGS)
 
