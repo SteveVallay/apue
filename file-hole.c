@@ -26,6 +26,12 @@ int main(int argc , char* argv[]) {
 
     if (hole && lseek(fd, 16384, SEEK_SET) == -1)
         err_sys("lseek error");
+    if (!hole){
+        int a =0;
+        for (;a < 16374; a++){
+            write(fd,"a",1);
+        }
+    }
 
     if(write(fd, buf2, 10) != 10)
         err_sys("buf2 write error");
