@@ -5,7 +5,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		file-hole\
 		make-big-file\
 		io-efficiency \
-		get-fd-flag
+		get-fd-flag \
+		change-fd-flag
 
 all: $(PROGS)
 
