@@ -6,7 +6,9 @@ int main(int argc, char* argv[]){
         err_sys("Usage: ./get-fd-flag #fd \n");
 
     int fd = atoi(argv[1]);
-    int flag = fcntl(fd,F_GETFL);
+    int flag;
+    if ((flag = fcntl(fd,F_GETFL)) < 0 )
+        printf("get file stats flag error \n");
 
     switch (flag & O_ACCMODE) {
         case O_RDONLY:
@@ -19,7 +21,7 @@ int main(int argc, char* argv[]){
             printf(" read and write \n");
             break;
         default:
-            printf("get access mode  error !\n");
+            err_dump("unknown access mode !\n");
     }
 
     if (flag & O_APPEND)
