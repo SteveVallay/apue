@@ -1,6 +1,6 @@
 /**
  * APUE sample code of 4.3 , print type of the file for each command line.
- * date: 2013年 11月 29日 星期五 06:28:02 CST
+ * date: 2013/11/29 22:11:09
  * author: zhibin
  * mail: zhibinwang.q@gmail.com
  */
@@ -26,6 +26,16 @@ int main (int argc, char* argv[]){
             printf("%s is regular file \n", argv[i]);
         } else if (S_ISDIR(mode)){
             printf("%s is directory \n", argv[i]);
+        } else if (S_ISCHR(mode)) {
+            printf("%s is char device \n", argv[i]);
+        } else if (S_ISBLK(mode)) {
+            printf("%s is block device \n", argv[i]);
+        } else if (S_ISFIFO(mode)) {
+            printf("%s is fifo file \n", argv[i]);
+        } else if (S_ISLNK(mode)) {
+            printf("%s is link file \n", argv[i]);
+        } else if (S_ISSOCK(mode)) {
+            printf("%s is a socket \n", argv[i]);
         } else {
             printf("%s : unknown file type \n", argv[i]);
         }
