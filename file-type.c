@@ -9,36 +9,39 @@
 
 int main (int argc, char* argv[]){
     if (argc < 2){
-        printf("Usage: file-type  file1 file2 ...");
+        printf("Usage: file-type  file1 file2 ...\n");
         exit(1);
     }
 
     int i = 1;
     struct stat buf;
+    char *ptr;
     for (;i < argc;i++) {
-
+        printf("%s ", argv[i]);
         if (lstat(argv[i],&buf)  == -1){
-            err_sys("fail to get stat of the file %s\n",argv[i]);
+            err_ret("lstat failed !\n");
+            continue;
         }
 
         mode_t mode = buf.st_mode;
         if (S_ISREG(mode)){
-            printf("%s is regular file \n", argv[i]);
+            ptr = "is regular file";
         } else if (S_ISDIR(mode)){
-            printf("%s is directory \n", argv[i]);
+            ptr = "is directory";
         } else if (S_ISCHR(mode)) {
-            printf("%s is char device \n", argv[i]);
+            ptr = "is char device";
         } else if (S_ISBLK(mode)) {
-            printf("%s is block device \n", argv[i]);
+            ptr = "is block device";
         } else if (S_ISFIFO(mode)) {
-            printf("%s is fifo file \n", argv[i]);
+            ptr = "is FIFO";
         } else if (S_ISLNK(mode)) {
-            printf("%s is link file \n", argv[i]);
+            ptr = "is symbol link";
         } else if (S_ISSOCK(mode)) {
-            printf("%s is a socket \n", argv[i]);
+            ptr = "is socket";
         } else {
-            printf("%s : unknown file type \n", argv[i]);
+            ptr = "** unknown file type **";
         }
+        printf("%s \n",ptr);
     }
     exit(0);
 }
