@@ -7,7 +7,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		io-efficiency \
 		get-fd-flag \
 		change-fd-flag\
-		file-type
+		file-type \
+		access
 
 all: $(PROGS)
 
