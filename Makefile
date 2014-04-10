@@ -9,7 +9,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		change-fd-flag\
 		file-type \
 		access\
-		umask
+		umask \
+		chmod
 
 all: $(PROGS)
 
