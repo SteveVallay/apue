@@ -10,7 +10,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		file-type \
 		access\
 		umask \
-		chmod
+		chmod \
+		unlink
 
 all: $(PROGS)
 
