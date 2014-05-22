@@ -12,7 +12,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		umask \
 		chmod \
 		unlink \
-		symlink-readlink
+		symlink-readlink \
+		utime
 
 
 all: $(PROGS)
