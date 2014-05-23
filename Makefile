@@ -18,7 +18,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		readdir \
 		chdir \
 		getcwd \
-		devt
+		devt \
+		exercises/ch4/file-type2
 
 
 all: $(PROGS)
