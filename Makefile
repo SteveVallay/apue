@@ -17,7 +17,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		mkdir-rmdir\
 		readdir \
 		chdir \
-		getcwd
+		getcwd \
+		devt
 
 
 all: $(PROGS)
