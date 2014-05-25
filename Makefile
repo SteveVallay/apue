@@ -20,7 +20,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		getcwd \
 		devt \
 		exercises/ch4/file-type2 \
-		getc-putc
+		getc-putc \
+		fgetc-fputc 
 
 
 all: $(PROGS)
