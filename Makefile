@@ -21,7 +21,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		devt \
 		exercises/ch4/file-type2 \
 		getc-putc \
-		fgetc-fputc 
+		fgetc-fputc  \
+		std_io_buffer_type 
 
 
 all: $(PROGS)
