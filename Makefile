@@ -24,6 +24,7 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		fgetc-fputc  \
 		std_io_buffer_type \
 		tmpfile\
+		tmpfile2\
 		mkstemp
 
 
