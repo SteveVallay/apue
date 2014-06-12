@@ -25,9 +25,9 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		std_io_buffer_type \
 		tmpfile\
 		tmpfile2\
-		mkstemp\
-		ch6/getpw\
-		ch6/getpwnam
+		mkstemp
+
+include ch6/Makefile
 
 
 all: $(PROGS)
