@@ -6,7 +6,8 @@ PROGS +=  ch6/getpw\
 		  ch6/uname\
 		  ch6/gethostname\
 		  ch6/time \
-		  ch6/gettimeofday
+		  ch6/gettimeofday\
+		  ch6/timeformat
 
 
 
