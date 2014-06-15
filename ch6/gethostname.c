@@ -1,6 +1,6 @@
 #include "apue.h"
 #include <unistd.h>
-#define HOST_NAME_MAX 128
+#define HOST_NAME_MAX 64
 int main (int argc, char* argv[])
 {
     char hostname[HOST_NAME_MAX];
