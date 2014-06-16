@@ -20,5 +20,10 @@ int main(int argc, char* argv[])
     printf("tm_wday: %d\n", ptm->tm_wday);
     printf("tm_yday: %d\n", ptm->tm_yday);
     printf("tm_isdst: %d\n", ptm->tm_isdst);
+
+    char * astime;
+    if ((astime = asctime(ptm)) == NULL)
+        err_quit("asctime fail!\n");
+    printf("astime: %s\n", astime);
     return 0;
 }
