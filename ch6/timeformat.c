@@ -29,5 +29,13 @@ int main(int argc, char* argv[])
     char* st;
     st = ctime(&cur);
     printf("ctime string:%s",st);
+
+    char str[64];
+
+    if (strftime(str,64,"time:%D %H:%M:%S",ptm) < 0)
+    {
+        err_quit("strftime fail!\n");
+    }
+    printf("time: %s\n",str);
     return 0;
 }
