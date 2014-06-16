@@ -25,5 +25,9 @@ int main(int argc, char* argv[])
     if ((astime = asctime(ptm)) == NULL)
         err_quit("asctime fail!\n");
     printf("astime: %s\n", astime);
+
+    char* st;
+    st = ctime(&cur);
+    printf("ctime string:%s",st);
     return 0;
 }
