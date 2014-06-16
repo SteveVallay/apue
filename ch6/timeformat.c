@@ -8,6 +8,8 @@ int main(int argc, char* argv[])
     time(&cur);
     if ((ptm = localtime(&cur))  == NULL)
         err_quit("mktime fail!\n");
+    if ((ptm = gmtime(&cur)) == NULL)
+        err_quit("gmtime fail!\n");
 
     printf("tm_sec: %d\n", ptm->tm_sec);
     printf("tm_min: %d\n", ptm->tm_min);
