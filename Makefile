@@ -1,6 +1,6 @@
 include Make.defines.linux
 
-PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
+#PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		lseek \
 		file-hole\
 		make-big-file\
@@ -27,7 +27,8 @@ PROGS = myls read-write get-put getpid exe error1 error2 get-uid-gid signal\
 		tmpfile2\
 		mkstemp
 
-include ch6/Makefile
+#include ch6/Makefile
+include ch7/Makefile
 
 
 all: $(PROGS)
