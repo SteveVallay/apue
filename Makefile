@@ -28,7 +28,8 @@ include Make.defines.linux
 		mkstemp
 
 #include ch6/Makefile
-include ch7/Makefile
+#include ch7/Makefile
+include ch8/Makefile
 
 
 all: $(PROGS)
