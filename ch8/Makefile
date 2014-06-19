@@ -1,2 +1,2 @@
-PROGS +=  
+PROGS +=  ch8/pid
 
