@@ -6,7 +6,8 @@ PROGS +=  ch7/main\
 		  ch7/malloc\
 		  ch7/getenv\
 		  ch7/putenv\
-		  ch7/setjmp
+		  ch7/setjmp\
+		  ch7/rlimits
 
 
 
