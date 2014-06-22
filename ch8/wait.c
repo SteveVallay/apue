@@ -9,6 +9,7 @@ void pr_exit (int status)
     else if (WIFSIGNALED(status))
         printf("abnormal termination, signal number = %d%s\n",
                 WTERMSIG(status),
+/*seems no define WCOREDUMP in linux*/
 #ifdef WCOREDUMP
                 WCOREDUMP(status) ? " (core file generated)" : "");
 #else
